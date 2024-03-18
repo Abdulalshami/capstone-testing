@@ -1,0 +1,147 @@
+.modalBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Dimmed background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Above everything else */
+}
+
+.modalContent {
+  background: white;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 50px; /* More padding for white space */
+  max-width: 600px;
+  width: 90%; /* Adjust width as necessary */
+  margin: 0 auto; /* Center in the viewport */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.addBlogButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: block; /* Make it a block element to allow auto margins */
+  margin-left: auto; /* Auto margin on the left to push it to the right */
+  margin-right: 20px;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 300px;
+  max-width: 80%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.closeButton {
+  background: #ff5a5f; /* Red background */
+  color: white; /* White text */
+  border: none;
+  font-weight: bold; /* Make the 'X' more prominent */
+  position: absolute;
+  top: 10px; /* Position towards the top-right corner inside the modal */
+  right: 10px;
+  width: 30px; /* Fixed width and height */
+  height: 30px;
+  display: flex;
+  align-items: center; /* Center 'X' vertically */
+  justify-content: center; /* Center 'X' horizontally */
+  cursor: pointer;
+}
+
+.inputField,
+.textAreaField,
+.quillEditor {
+  margin-bottom: 20px; /* Space between fields and the last button */
+}
+
+.createBlogButton {
+  margin-top: 16px; /* Add margin on top */
+  align-self: center; /* Center the button if within a flex container */
+}
+
+.blogPost {
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+  line-height: 1.6; /* Improve readability */
+  color: #333; /* Darker text for better contrast */
+}
+
+.titleField,
+.descriptionField {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.titleField label,
+.descriptionField label {
+  margin-bottom: 5px;
+}
+
+.titleField input,
+.descriptionField textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+.titleField input {
+  height: 40px; /* Adjust as needed */
+}
+
+.createBlogButton {
+  margin-top: 16px; /* Add margin on top */
+  align-self: center; /* Center the button if within a flex container */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%; /* Ensure button takes full width */
+}
+
+.blogPageContainer {
+  padding: 20px; /* Add some padding to the container */
+}
+
+.blogsDisplay {
+  margin-top: 20px; /* Add some space between add blog button and blog posts */
+}
